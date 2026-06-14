@@ -1,4 +1,5 @@
 import { connection } from "next/server";
+import { CatImage } from "./cat-image";
 import { fetchImage } from "./fetch-image";
 
 
@@ -11,5 +12,5 @@ export default async function Home() {
   // (4) 画像URLをコンソールに表示
   console.log("Home: 画像情報を取得しました", image);
 
-  return <div>猫画像予定地</div>;
+  return <CatImage url={image.url} />;
 }
